@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+.container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #fffafa;
+
+}
+.form-group{
+    display: block;
+    margin-bottom: 1em;
+}
+small{
+    color: red;
+}
+.btn{
+    width: 25%;
+    height: 3em;
+    background-color: deepskyblue;
+    border: none;
+    color: white;
+    margin-top: 2em;
+}
+.exit{
+    background-color: deepskyblue;
+    border: none;
+    color: white;
+    padding: 0.5em;
+}
+header {
+    background: white;
+    border-bottom: 1px solid #999;
+    padding: 10px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+    right: 1em;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
