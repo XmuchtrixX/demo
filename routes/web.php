@@ -12,6 +12,9 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware('auth')->group(function () {
     Route::get('/applications', [ApplicationController::class, 'index'])->name('applications.index');
+    Route::get('/applications/create', [ApplicationController::class, 'create'])->name('applications.create');
+    Route::post('/applications/{id}/review', [ApplicationController::class, 'addReview'])->name('applications.review');
+    Route::post('/applications', [ApplicationController::class, 'store'])->name('applications.store');
 
 });
 

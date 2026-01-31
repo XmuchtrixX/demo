@@ -11,10 +11,9 @@
 <body>
 @include('header')
 
-<div class="main-content">
+<div class="container">
     <h1>Мои заявки</h1>
 
-    <div class="container">
         @if(session('success'))
             <div class="message message-success">{{ session('success') }}</div>
         @endif
@@ -25,7 +24,7 @@
 
 
 
-{{--        @if($applications->count() > 0)--}}
+        @if($applications->count() > 0)
             <table>
                 <thead>
                 <tr>
@@ -74,12 +73,11 @@
                 @endforeach
                 </tbody>
             </table>
-{{--        @else--}}
-{{--            <p >Нет заявок</p>--}}
-{{--        @endif--}}
+        @else
+            <p >Нет заявок</p>
+        @endif
 
         <a href="{{ route('applications.create') }}" >Создать заявку</a>
     </div>
-</div>
 </body>
 </html>
